@@ -16,7 +16,7 @@ export default function Mercado(){
     return (
         <>
         <div className="flex flex-col justify-center items-center">  
-            <div className="flex w-[100%] h-[20px] bg-[#1E1E1E] justify-center items-center mb-5">
+            <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center mb-5">
                 <h1 className="text-[#00C174]">MERCADO</h1>
             </div>
             

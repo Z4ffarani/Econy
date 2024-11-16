@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "nome": "edf électricite de france",
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque. Porro saepe laboriosam, fugiat accusamus sit corporis, dignissimos nostrum odio sapiente adipisci iusto fugit.",
+        "pais": "franca",
+        "creditos": "20.054.225",
+        "selos": ["ISO14001", "CDP", "MSCI"]
+ 
+    },
+
+    {
+        "id": 2,
+        "nome": "rwe ag",
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque. Porro saepe laboriosam, fugiat accusamus sit corporis, dignissimos nostrum odio sapiente adipisci iusto fugit.",
+        "pais": "alemanha",
+        "creditos": "32.105.756",
+        "selos": ["ISO14001", "CDP", "PREENCHER"]
+ 
+    }
+]

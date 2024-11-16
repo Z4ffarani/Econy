@@ -56,9 +56,24 @@
   /* componente de container tela de certificado */
   .certificadoCard{
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: #CACACA;
     border-radius: 10px;
-    height: 125px;
+    height: 140px;
+    width: 80%;
+  }
+
+  /* Botão obter certificado */
+  .obterCert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 20px;
+    color: white;
+    border-radius: 5px;
   }
 }
 

@@ -5,7 +5,7 @@ export default function MarketCard({mercado, preco, ytd, cambio, pais}) {
     return (
         <>
             <div className="marketCard">
-                <img className="h-[40px]" src={`../../images/${pais}.png`} alt="country" />
+                <img className="h-[40px]" src={`../../images/paises/${pais}.png`} alt="country" />
 
                 <div>
                     <h1>MERCADO:</h1>
