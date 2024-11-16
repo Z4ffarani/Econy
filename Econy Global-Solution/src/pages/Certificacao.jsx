@@ -3,7 +3,7 @@ import CertificadoCard from "../components/CertificadoCard";
 export default function Certificacao(){
     return (
         <>
-        <div className="flex flex-col items-center">  
+        <div className="flex flex-col h-[95vh] items-center">  
             <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center mb-5">
                 <h1 className="text-[#00C174]">CERTIFICAÇÃO</h1>
             </div>

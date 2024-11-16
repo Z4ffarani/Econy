@@ -1,21 +1,25 @@
 [
     {
         "id": 1,
-        "nome": "edf électricite de france",
-        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque. Porro saepe laboriosam, fugiat accusamus sit corporis, dignissimos nostrum odio sapiente adipisci iusto fugit.",
+        "busca": "edf électricite de france",
+        "nome":  "Électricite de France",
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque.",
+        "url" : "EDF",
         "pais": "franca",
         "creditos": "20.054.225",
-        "selos": ["ISO14001", "CDP", "MSCI"]
+        "selos": ["ISO14001"]
  
     },
 
     {
         "id": 2,
-        "nome": "rwe ag",
-        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque. Porro saepe laboriosam, fugiat accusamus sit corporis, dignissimos nostrum odio sapiente adipisci iusto fugit.",
+        "busca": "rwe ag",
+        "nome": "RWE AG",
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque.",
         "pais": "alemanha",
+        "url" : "RWE",
         "creditos": "32.105.756",
-        "selos": ["ISO14001", "CDP", "PREENCHER"]
+        "selos": ["ISO14001", "MSCI", "CDP"]
  
     }
 ]

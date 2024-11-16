@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import dados from "../data/empresas.json"
+import EmpresaCard from "../components/EmpresasCard"
 
 export default function Empresas(){
 
@@ -15,35 +16,42 @@ export default function Empresas(){
     }
 
     // constante que verifica se há o elemento dentro do JSON dados.
-    const searchEmpresas = dados.filter(empresa => empresa.nome.toLowerCase().includes(search.toLowerCase()))
+    const searchEmpresas = dados.filter(empresa => empresa.busca.toLowerCase().includes(search.toLowerCase()))
     
     return (
         <>
-        <div className="flex flex-col">  
+        <div className="flex flex-col items-center gap-3 h-[95vh]">  
             <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center">
                 <h1 className="text-[#00C174]">EMPRESAS</h1>
             </div>
 
             {/* Barra de pesquisa, que tem como valor o pesquisar(search) que aciona uma função que observa alterações no elemento e que será 'jogada' no searchEmpresas, para verificar se esta incluso no JSON*/}
             <input
-                className="text-black"
+                className="w-[80%] max-w-[700px] text-black border-black border-2 rounded-[10px] mx-auto"
                 type="text"
                 id="search"
                 value={search}
                 onChange={handleSearch}
                 placeholder="Digite o nome da empresa..."
             />
-            <div>
+            <div className="grid grid-cols-[320px] sm:grid-cols-[320px_320px]  gap-10 mx-auto max-w-[95%]">
                 {/* DIV com componente que ao passar pelos dados da constante de pesquisa, atribui as informações necessárias para o componente */}
-                {
+                {   
+                    // if ternário, se não houver empresas compativeis com o que for digitado, apresenta mensagem de "erro"
                     searchEmpresas.length > 0 ?
 
                         searchEmpresas.map(empresa => (
-                            <h1>Me achou rs {empresa.nome}</h1>
+                            <EmpresaCard empresaImg={empresa.url} 
+                                        empresaNome={empresa.nome}
+                                        selos={empresa.selos}
+                                        empresaPais={empresa.pais}
+                                        empresaDescricao={empresa.descricao}
+                                        empresaCreditos={empresa.creditos}/>
+                                        
 
                         ))
                     :
-                    <p>empresa não disponível</p>
+                    <p>Empresa não disponível.</p>
                 }
             </div>
         </div>

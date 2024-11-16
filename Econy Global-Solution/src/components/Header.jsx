@@ -16,6 +16,13 @@ export default function Header() {
         setShowPoints(prev => !prev)
     }
 
+    // Nome da sessão da pagina no nav
+    const [sectionName, setSectionName] = useState("")
+
+    const handleSectionName = (event) => {
+        setSectionName(event.target.textContent)
+    }
+
     return ( 
         <>
             <header className="flex h-[50px] w-[100%] bg-[#00C174] justify-center items-center">
@@ -40,11 +47,11 @@ export default function Header() {
                     </div>
                 </div>
                 <div className={`${showButton ? 'flex flex-col translate-y-[120px] opacity-1 z-10' : 'flex flex-col  opacity-0 pointer-events-none translate-y-[90px] z-0'} w-[200px] rounded-[5px] m-2 absolute left-0  bg-[#1e1e1e] text-[#FFFFFF] transition-all ease-in-out duration-500`}>
-                    <NavLink to="/" className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>DASHBOARD</NavLink>
-                    <NavLink to="/Mercado" className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>MERCADO</NavLink>
-                    <NavLink to="/Empresas" className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>EMPRESAS</NavLink>
-                    <NavLink to="/Contratos" className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CONTRATOS</NavLink>
-                    <NavLink to="/Certificação" className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CERTIFICAÇÃO</NavLink>
+                    <NavLink to="/" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>DASHBOARD</NavLink>
+                    <NavLink to="/Mercado" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>MERCADO</NavLink>
+                    <NavLink to="/Empresas" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>EMPRESAS</NavLink>
+                    <NavLink to="/Contratos" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CONTRATOS</NavLink>
+                    <NavLink to="/Certificação" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CERTIFICAÇÃO</NavLink>
                 </div>
             </header>
         </>
