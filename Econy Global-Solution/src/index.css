@@ -16,6 +16,8 @@
   /* credito de carbono e nome da empresa */
   .headerPoints{
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60px;
     height: 15px;
     border-radius: 15px;
@@ -23,7 +25,7 @@
     color: #00C174;
   }
 
-  /* componente de container tela de mercado */
+  /* COMPONENTE CARD MERCADO */
   .marketCard{
     display: flex;
     justify-content: space-around;
@@ -76,7 +78,8 @@
     border-radius: 5px;
   }
 
-  /*  Componente Empresas*/
+
+  /*  COMPONENTE EMPRESAS */
   /* container nome da empresa */
   .empresaNome{
     width: 55%;
@@ -162,6 +165,77 @@
   .empresaDescricao p{
     padding: 8px;
   }
+
+
+  /* COMPONENTE CONTRATOS */
+ .divContrato{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+ }
+ 
+  /* lado superior/esquerdo */
+  .contratoSupEsq{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .idContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #C7C7C7;
+    color: white;
+    font-size: 20px;
+  }
+
+  /* lado inferior/direito */
+  .contratoInfDir{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #C7C7C7;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .contratoCompra{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 5px;
+    color: #00C174;
+  }
+
+  .contratoCompra p{
+    font-weight: 500;
+  }
+
+  /* botões de contrato */
+  .buttonContratoContainer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .buttonContrato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+
 }
 
 *{

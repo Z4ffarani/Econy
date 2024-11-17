@@ -2,7 +2,7 @@ export default function Dashboard(){
     return (
         <>
         <div className="flex">  
-            <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center">
+            <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center | sm:hidden">
                 <h1 className="text-[#00C174]">DASHBOARD</h1>
             </div>
         </div>

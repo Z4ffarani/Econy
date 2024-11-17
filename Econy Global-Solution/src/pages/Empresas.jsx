@@ -5,11 +5,6 @@ import EmpresaCard from "../components/EmpresasCard"
 export default function Empresas(){
 
     const [search, setSearch] = useState("")
-    const [empresas, setEmpresas] = useState([])
-
-    useEffect(() =>{
-        setEmpresas(dados)
-    }, []);
 
     const handleSearch = (event) => {
         setSearch(event.target.value)
@@ -20,39 +15,43 @@ export default function Empresas(){
     
     return (
         <>
-        <div className="flex flex-col items-center gap-3 h-[95vh]">  
-            <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center">
+        <div>  
+            <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center | sm:hidden">
                 <h1 className="text-[#00C174]">EMPRESAS</h1>
             </div>
 
-            {/* Barra de pesquisa, que tem como valor o pesquisar(search) que aciona uma função que observa alterações no elemento e que será 'jogada' no searchEmpresas, para verificar se esta incluso no JSON*/}
-            <input
-                className="w-[80%] max-w-[700px] text-black border-black border-2 rounded-[10px] mx-auto"
-                type="text"
-                id="search"
-                value={search}
-                onChange={handleSearch}
-                placeholder="Digite o nome da empresa..."
-            />
-            <div className="grid grid-cols-[320px] sm:grid-cols-[320px_320px]  gap-10 mx-auto max-w-[95%]">
+            {/* Area de busca e display de empresas */}
+            <div className="flex flex-col items-center my-[30px] gap-3 | sm:mt-0">
+
+                {/* Barra de pesquisa, que tem como valor o pesquisar(search) que aciona uma função que observa alterações no elemento e que será 'jogada' no searchEmpresas, para verificar se esta incluso no JSON*/}
+                <input
+                    className="w-[320px] text-black border-black border-2 rounded-[10px] mx-auto | sm:w-[640px]"
+                    type="text"
+                    id="search"
+                    value={search}
+                    onChange={handleSearch}
+                    placeholder="Digite o nome da empresa..."
+                />
+                
                 {/* DIV com componente que ao passar pelos dados da constante de pesquisa, atribui as informações necessárias para o componente */}
-                {   
-                    // if ternário, se não houver empresas compativeis com o que for digitado, apresenta mensagem de "erro"
-                    searchEmpresas.length > 0 ?
+                <div className="grid grid-cols-[320px] justify-center gap-10 mx-auto max-w-[95%] |  sm:grid-cols-[300px_300px] ">
+                    {   
+                        // if ternário, se não houver empresas compativeis com o que for digitado, apresenta mensagem de "erro"
+                        searchEmpresas.length > 0 ?
 
-                        searchEmpresas.map(empresa => (
-                            <EmpresaCard empresaImg={empresa.url} 
-                                        empresaNome={empresa.nome}
-                                        selos={empresa.selos}
-                                        empresaPais={empresa.pais}
-                                        empresaDescricao={empresa.descricao}
-                                        empresaCreditos={empresa.creditos}/>
-                                        
-
-                        ))
-                    :
-                    <p>Empresa não disponível.</p>
-                }
+                            searchEmpresas.map(empresa => (
+                                <EmpresaCard empresaImg={empresa.url} 
+                                            empresaNome={empresa.nome}
+                                            selos={empresa.selos}
+                                            empresaPais={empresa.pais}
+                                            empresaDescricao={empresa.descricao}
+                                            empresaCreditos={empresa.creditos}/>
+                                            
+                            ))
+                        :
+                        <p>Empresa não disponível.</p>
+                    }
+                </div>
             </div>
         </div>
         </>

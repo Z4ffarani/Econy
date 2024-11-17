@@ -1,8 +1,11 @@
 export default function Footer() {
     return ( 
         <>
-            <footer className="flex w-[100%] h-[60px] bg-[#00C174]">
-                <h1>teste</h1>
+            <footer className="flex justify-center items-center w-[100%] h-[50px] bg-[#00C174] | sm:flex sm:justify-end sm:h-[60px]">
+                {/* LOGO MOBILE */}
+                <img  className="w-[50px] | sm:hidden" src="../../images/econyMiniLogo.png" alt="ECONY"/>
+                {/* LOGO DESKTOP+ */}
+                <img className="hidden | sm:flex sm:w-[150px] sm:mr-[20px]" src="../../images/econyLogo.png" alt="ECONY"/>
             </footer>
         </>
      );

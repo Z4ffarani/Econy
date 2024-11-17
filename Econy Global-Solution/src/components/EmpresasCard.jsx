@@ -13,36 +13,42 @@ export default function EmpresaCard({empresaImg, empresaNome, selos, empresaPais
 
     return (
         <>
+        {/* DIV PRINCIPAL */}
         <div className="flex flex-col gap-2">
-            <div className="flex justify-between">
+            
+            {/* CONTAINER COM NOME DA EMPRESA E BOTÃO PARA CONTRATAR */}
+            <div className="flex justify-between items-center">
                 <h1 className="empresaNome">{empresaNome}</h1>
-                <span>|</span>
+                <hr className="h-[20px] border border-[#c9c9c9]"/>
                 <button onClick={handleContratar} className={`contratarBtn ${contratar === "CONTRATAR" ? 'bg-transparent border-[2px] border-[#00C174] text-[#00C174]' : 'bg-[#1e1e1e] border-[#1e1e1e] border-[2px] text-white pointer-events-none'} hover:bg-[#00C174] hover:text-white  transition ease-in-out duration-500`}>{contratar}</button>
             </div>
-            <div>
-                <div className="relative">
-                    <img className="empresaImg" src={`../../images/empresas/${empresaImg}.png`} alt={`${empresaNome}`} />
-                    <div className="empresaIcons">
-                        <img className="empresaPais" src={`../../images/paises/${empresaPais}.png`} alt={`${empresaPais}`}/>
-                        {
-                            selos.map(selos => (
-                                <img className="seloIcon" src={`../../images/selos/${selos}.png`} alt={`${selos}`}/>
-                            )
-                            )
-                        }
-                    </div>
-                    <div className="empresaCreditos">
-                        <p>{empresaCreditos}</p>
-                        <img className="h-[35px] absolute p-1 right-0" src="../../images/iconCO2.png" alt="CO2" />
-                    </div>
-                </div>
 
+            {/* CARD DA EMPRESA */}
+            <div className="relative">
+                <img className="empresaImg" src={`../../images/empresas/${empresaImg}.png`} alt={`${empresaNome}`} />
+                <div className="empresaIcons">
+                    <img className="empresaPais" src={`../../images/paises/${empresaPais}.png`} alt={`${empresaPais}`}/>
+                    {
+                        selos.map(selos => (
+                            <img className="seloIcon" src={`../../images/selos/${selos}.png`} alt={`${selos}`}/>
+                        )
+                        )
+                    }
+                </div>
+                <div className="empresaCreditos">
+                    <p>{empresaCreditos}</p>
+                    <img className="h-[35px] absolute p-1 right-0" src="../../images/iconCO2.png" alt="CO2" />
+                </div>
             </div>
+
+
+            {/* CONTAINER DE DESCRIÇÃO DE EMPRESA */}
             <div className="empresaDescricao">
                 <p >
                     {empresaDescricao}
                 </p>
             </div>
+            
         </div>  
         </>
         

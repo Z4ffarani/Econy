@@ -7,7 +7,8 @@
         "url" : "EDF",
         "pais": "franca",
         "creditos": "20.054.225",
-        "selos": ["ISO14001"]
+        "selos": ["ISO14001"],
+        "contrato": ["25.000,00"]
  
     },
 
@@ -19,7 +20,60 @@
         "pais": "alemanha",
         "url" : "RWE",
         "creditos": "32.105.756",
-        "selos": ["ISO14001", "MSCI", "CDP"]
+        "selos": ["ISO14001", "MSCI", "CDP"],
+        "contrato": ["25.000,00"]
+ 
+    },
+
+    {
+        "id": 3,
+        "busca": "framatome",
+        "nome": "Framatome",
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque.",
+        "pais": "franca",
+        "url" : "FRAMATOME",
+        "creditos": "22.505.832",
+        "selos": ["ISO14001", "ISO50001", "IAEA"],
+        "contrato": ["25.000,00"]
+ 
+    },
+
+    {
+        "id": 4,
+        "busca": "vattenfall",
+        "nome": "Vattenfall",
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque.",
+        "pais": "suecia",
+        "url" : "VATTENFALL",
+        "creditos": "31.005.968",
+        "selos": ["ISO14001", "SBTI", "CDP"],
+        "contrato": ["25.000,00"]
+ 
+    },
+
+    {
+        "id": 5,
+        "busca": "fennovoima",
+        "nome": "Fennovoima",
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque.",
+        "pais": "finlandia",
+        "url" : "FENNOVOIMA",
+        "creditos": "17.505.956",
+        "selos": ["ISO14001", "IAEA", "EMAS"],
+        "contrato": ["25.000,00"]
+ 
+    },
+
+    {
+        "id": 6,
+        "busca": "eurodif",
+        "nome": "Eurodif",
+        "descricao": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolore dolores numquam ea repudiandae. Quae, atque.",
+        "pais": "franca",
+        "url" : "EURODIF",
+        "creditos": "43.046.108",
+        "selos": ["ISO14001", "IAEA", "EMAS"],
+        "contrato": ["25.000,00"]
  
     }
 ]
