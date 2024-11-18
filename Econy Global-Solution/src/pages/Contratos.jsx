@@ -41,7 +41,7 @@ export default function Contratos(){
 
                     <div className="grid grid-cols-[320px] justify-center mx-auto max-w-[95%] | sm:grid-cols-[640px]">
                             {   
-
+                      
                             searchEmpresas.length > 0 ?
                         
                                 searchEmpresas.map(empresa => (

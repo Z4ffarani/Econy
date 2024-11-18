@@ -28,18 +28,26 @@ export default function Header() {
     const [carbonCred, setCarbonCred] = useState(0)
 
     useEffect(()=>{
-        localStorage.setItem('carbonCred', JSON.stringify(carbonCred))
-    }, [carbonCred])
-
-    useEffect(()=>{
-        let creditos = Number(localStorage.getItem('carbonCred'))
-        
-        if (creditos === 0) {
-            creditos = 1000000
+        // detectar mudança para atualizar qtd de creditos
+        const handleMudancaCreditos = () => {
+            const creditos = JSON.parse(localStorage.getItem('carbonCred')) || 1000000
             setCarbonCred(creditos)
         }
         
-    },[])
+        window.addEventListener('storage', handleMudancaCreditos)
+
+        return() => {
+            window.removeEventListener('storage', handleMudancaCreditos)
+        }
+    }, [])
+
+    // apresentar 1.000.000 de creditos "base"
+    useEffect(() => {
+        const creditos = JSON.parse(localStorage.getItem('carbonCred')) || 1000000
+        setCarbonCred(creditos)
+        
+    }, [])
+
 
     // Formatação de pontuação por casa de milhares
     const creditoFormatado = new Intl.NumberFormat('pt-BR').format(carbonCred);

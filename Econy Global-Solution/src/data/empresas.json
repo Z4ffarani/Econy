@@ -8,8 +8,8 @@
         "pais": "franca",
         "creditos": "20.054.225",
         "selos": ["ISO14001"],
-        "contrato": ["25.000,00"]
- 
+        "contrato": "25.000,00",
+        "valor": "25000"
     },
 
     {
@@ -21,7 +21,8 @@
         "url" : "RWE",
         "creditos": "32.105.756",
         "selos": ["ISO14001", "MSCI", "CDP"],
-        "contrato": ["25.000,00"]
+        "contrato": "25.000.00",
+        "valor": "25000"
  
     },
 
@@ -34,7 +35,8 @@
         "url" : "FRAMATOME",
         "creditos": "22.505.832",
         "selos": ["ISO14001", "ISO50001", "IAEA"],
-        "contrato": ["25.000,00"]
+        "contrato": "25.000,00",
+        "valor": "25000"
  
     },
 
@@ -47,8 +49,8 @@
         "url" : "VATTENFALL",
         "creditos": "31.005.968",
         "selos": ["ISO14001", "SBTI", "CDP"],
-        "contrato": ["25.000,00"]
- 
+        "contrato": "25.000,00",
+        "valor": "25000"
     },
 
     {
@@ -60,8 +62,8 @@
         "url" : "FENNOVOIMA",
         "creditos": "17.505.956",
         "selos": ["ISO14001", "IAEA", "EMAS"],
-        "contrato": ["25.000,00"]
- 
+        "contrato": "25.000,00",
+        "valor": "25000"
     },
 
     {
@@ -73,7 +75,7 @@
         "url" : "EURODIF",
         "creditos": "43.046.108",
         "selos": ["ISO14001", "IAEA", "EMAS"],
-        "contrato": ["25.000,00"]
- 
+        "contrato": "25.000,00",
+        "valor": "25000"
     }
 ]
