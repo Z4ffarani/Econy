@@ -1,11 +1,21 @@
+import { useEffect, useState } from "react"
+
 export default function Dashboard(){
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8000/nuclearPlantInventory')
+        .then((response) => response.json())
+        .then((data) => setData(data.inventory))
+        .then(console.log(data))
+        .catch((error) => console.log("Erro as buscar os dados:", error));
+    }, [])
+
     return (
-        <>
-        <div className="flex">  
-            <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center | sm:hidden">
-                <h1 className="text-[#00C174]">DASHBOARD</h1>
-            </div>
-        </div>
-        </>
+        <main>
+            {data.map((item) => (
+                <h1 key={item.id} className="text-black">{item.name}</h1>
+            ))}
+        </main>
     )
 }

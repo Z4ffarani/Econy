@@ -223,14 +223,25 @@
   /* botões de contrato */
   .buttonContratoContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 10px;
   }
 
   .buttonContrato{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 48%;
+    width: 80%;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+
+  .buttonGerenciarContrato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     font-size: 14px;
     font-weight: 500;
     border-radius: 5px;

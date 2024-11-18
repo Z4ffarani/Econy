@@ -95,18 +95,18 @@ export default function Header() {
                         <NavLink to="/Mercado" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>MERCADO</NavLink>
                         <NavLink to="/Empresas" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>EMPRESAS</NavLink>
                         <NavLink to="/Contratos" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CONTRATOS</NavLink>
-                        <NavLink to="/Certificação" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CERTIFICAÇÃO</NavLink>
+                        <NavLink to="/Certificacao" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CERTIFICAÇÃO</NavLink>
                     </div>
                 </div>
             </header>
             {/* CONTEUDO MENU DE NAVEGAÇÃO W-640px+ */}
             <div className="hidden  | sm:flex sm:flex-col sm:mb-[30px]">
-                <nav className="flex justify-center items-center h-[25px] gap-5 bg-[#1E1E1E] text-white">
+                <nav className="py-[19px] flex justify-center items-center h-[25px] gap-5 bg-[#1E1E1E] text-white">
                     <NavLink to="/" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>DASHBOARD</NavLink>
                     <NavLink to="/Mercado" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>MERCADO</NavLink>
                     <NavLink to="/Empresas" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>EMPRESAS</NavLink>
                     <NavLink to="/Contratos" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>CONTRATOS</NavLink>
-                    <NavLink to="/Certificação" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>CERTIFICAÇÃO</NavLink>
+                    <NavLink to="/Certificacao" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>CERTIFICAÇÃO</NavLink>
                 </nav>
             </div>
         </>
