@@ -59,10 +59,10 @@ export default function Header() {
                                     
                     {/* PONTUAÇÃO RESPONSIVA 640px+ */}
                         <div className="hidden | sm:flex gap-2 mx-[70px]">
-                            <div className="headerPoints w-[100px] h-5">
+                            <div className="headerPoints w-[100px] h-[28px]">
                                 <p id="nomeEmpresa"></p>
                             </div>
-                            <div className="headerPoints w-[100px] h-5">
+                            <div className="headerPoints w-[100px] h-[28px]">
                                 <p id="creditoCarbono">{creditoFormatado}</p>
                             </div>
                         </div>
