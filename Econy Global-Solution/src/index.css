@@ -223,17 +223,96 @@
   /* botões de contrato */
   .buttonContratoContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 10px;
   }
 
   .buttonContrato{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 48%;
+    width: 80%;
     font-size: 14px;
     font-weight: 500;
     border-radius: 5px;
+  }
+
+  .buttonGerenciarContrato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+
+  .celula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px black;
+    font-family: Open Sans;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 5px 0px;
+    background-color: #46ffb5;
+    margin: -1px -1px;
+  }
+
+  .celula2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px black;
+    font-family: Open Sans;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 5px 0px;
+    background-color: #81e6ff;
+    margin: -1px -1px;
+  }
+
+  .celula3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: solid 2px black;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 0px;
+    margin: -1px -1px;
+  }
+
+  .input {
+    text-align: center;
+    border: solid 2px rgb(211, 211, 211);
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Open Sans;
+    font-weight: 500;
+    height: 40px;
+  }
+
+  .botaoCrud {
+    background-color: #00C174;
+    width: 135px;
+    height: 45px;
+    border-radius: 8px;
+    font-family: Open Sans;
+    font-weight: 500;
+    color: white;
+    transition: 200ms ease;
+  }
+
+  .botaoCrud:hover {
+    filter: brightness(0.9);
+  }
+
+  .botaoCrud:active {
+    scale: 0.9;
   }
 
 
@@ -265,3 +344,4 @@
   font-family: 'Kanit', sans-serif;
   font-weight: 300;
 }
+

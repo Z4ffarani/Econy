@@ -1,11 +1,15 @@
-import { redirect, useParams, Link } from "react-router-dom"
-import dados from "../data/empresas.json"
+import { useParams } from "react-router-dom";
+import dados from "../data/empresas.json";
 
-export default function GerenciarContrato(){
-    const { contrato } = useParams()
-    const IDS = JSON.parse(localStorage.getItem('IDS'))
+export default function GerenciarContrato() {
+  // Captura o parâmetro dinâmico 'contrato' da URL
+  const { contrato } = useParams();
 
-    const contratoDados = dados.find(item => item.id === contrato)
+  // Recupera a lista de IDs do localStorage
+  const IDS = JSON.parse(localStorage.getItem('IDS')) || [];
+
+  // Encontra os dados do contrato correspondente no JSON 'dados'
+  const contratoDados = dados.find(item => item.id === contrato);
 
     // cancelar contrato
     const cancelar = () => {
@@ -73,7 +77,6 @@ export default function GerenciarContrato(){
                 <p>Pagina não encontrada</p>
             }
         </div>
-           
-        </>
-    )
+    </div>
+  );
 }

@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function ContratoCard({id, empresaImg, selos, contratoValor, empresaNome}){
     
     // buscando dicionario de IDS e Emissões
     const IDS = JSON.parse(localStorage.getItem('IDS'))
-
-    // estabelecendo rota dinamica
-   let {contrato} = useParams()
 
     return(
         <>
@@ -41,8 +37,8 @@ export default function ContratoCard({id, empresaImg, selos, contratoValor, empr
                     </div>
                     <div className="buttonContratoContainer">
                         <button className="buttonContrato bg-white text-[#00C174] | sm:p-[10px] sm:text-[16px]">Contrato pendente...</button>
-                        <Link to={id}>
-                            <button className="buttonContrato bg-[#00C174] text-white hover:bg-white hover:text-[#00C174] transition ease-in-out duration-300">GERENCIAR CONTRATO</button>
+                        <Link to={`/Contratos/${id}`}>
+                            <button className="buttonGerenciarContrato bg-[#00C174] text-white hover:bg-white hover:text-[#00C174] transition ease-in-out duration-300">GERENCIAR CONTRATO</button>
                         </Link>
                     </div>
                 </div>

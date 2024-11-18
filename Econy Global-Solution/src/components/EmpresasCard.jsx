@@ -5,9 +5,6 @@ export default function EmpresaCard({empresaImg, empresaNome, selos, empresaPais
 
     const handleContratar = () => {
         setContratar("CONTRATADA")
-        setTimeout(()=>{
-            alert(`${empresaNome} contratada`)
-        }, 600)
 
         // array de IDS
         const IDS = JSON.parse(localStorage.getItem('IDS')) || {};

@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {path:'/Empresas', element: <Empresas/>},
       {path:'/Contratos', element: <Contratos/>},
       {path:'/Contratos/:contrato', element: <GerenciarContrato/>},
-      {path:'Certificação', element: <Certificacao/>}
+      {path:'Certificacao', element: <Certificacao/>}
     ]
   },
   { path: '*', element: <PageNotFound /> }

@@ -25,7 +25,7 @@ export default function Empresas(){
 
                 {/* Barra de pesquisa, que tem como valor o pesquisar(search) que aciona uma função que observa alterações no elemento e que será 'jogada' no searchEmpresas, para verificar se esta incluso no JSON*/}
                 <input
-                    className="w-[320px] text-black border-black border-2 rounded-[10px] mx-auto | sm:w-[640px]"
+                    className="w-[320px] text-black p-[4px] pl-2 border-black border-2 rounded-[10px] mx-auto | sm:w-[640px]"
                     type="text"
                     id="search"
                     value={search}
