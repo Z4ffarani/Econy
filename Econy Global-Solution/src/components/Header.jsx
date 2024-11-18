@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
     // Botão hamburguer, ativar e desativar menu
@@ -23,6 +23,27 @@ export default function Header() {
         setSectionName(event.target.textContent)
     }
 
+
+    // LOCALSTORAGE ARMEZENAR créditos
+    const [carbonCred, setCarbonCred] = useState(0)
+
+    useEffect(()=>{
+        localStorage.setItem('carbonCred', JSON.stringify(carbonCred))
+    }, [carbonCred])
+
+    useEffect(()=>{
+        let creditos = Number(localStorage.getItem('carbonCred'))
+        
+        if (creditos === 0) {
+            creditos = 1000000
+            setCarbonCred(creditos)
+        }
+        
+    },[])
+
+    // Formatação de pontuação por casa de milhares
+    const creditoFormatado = new Intl.NumberFormat('pt-BR').format(carbonCred);
+
     return ( 
         <>
             <header className="flex h-[50px] w-[100%] bg-[#00C174] justify-center items-center | sm:flex sm:justify-between sm:h-[60px] | lg:justify-center">
@@ -42,7 +63,7 @@ export default function Header() {
                                 <p id="nomeEmpresa"></p>
                             </div>
                             <div className="headerPoints w-[100px] h-5">
-                                <p id="creditoCarbono"></p>
+                                <p id="creditoCarbono">{creditoFormatado}</p>
                             </div>
                         </div>
 
@@ -64,7 +85,7 @@ export default function Header() {
                             <p id="nomeEmpresa"></p>
                         </div>
                         <div className="headerPoints | sm:hidden">
-                            <p id="creditoCarbono"></p>
+                            <p id="creditoCarbono">{creditoFormatado}</p>
                         </div>
                     </div>
 

@@ -10,7 +10,7 @@ export default function Empresas(){
         setSearch(event.target.value)
     }
 
-    // constante que verifica se há o elemento dentro do JSON dados.
+    // constante que verifica se há o elemento dentro do JSON 'dados.json'.
     const searchEmpresas = dados.filter(empresa => empresa.busca.toLowerCase().includes(search.toLowerCase()))
     
     return (
@@ -40,16 +40,19 @@ export default function Empresas(){
                         searchEmpresas.length > 0 ?
 
                             searchEmpresas.map(empresa => (
+                                
                                 <EmpresaCard empresaImg={empresa.url} 
                                             empresaNome={empresa.nome}
                                             selos={empresa.selos}
                                             empresaPais={empresa.pais}
                                             empresaDescricao={empresa.descricao}
-                                            empresaCreditos={empresa.creditos}/>
+                                            empresaCreditos={empresa.creditos}
+                                            id={empresa.id}/>
                                             
                             ))
                         :
                         <p>Empresa não disponível.</p>
+                        
                     }
                 </div>
             </div>

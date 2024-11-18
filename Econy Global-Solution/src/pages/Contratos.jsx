@@ -13,6 +13,9 @@ export default function Contratos(){
     // constante que verifica se há o elemento dentro do JSON dados.
     const searchEmpresas = dados.filter(empresa => empresa.busca.toLowerCase().includes(search.toLowerCase()))
 
+    // recuperando lista de IDS via local storage
+    const IDS = JSON.parse(localStorage.getItem('IDS'))
+
     return (
         <>
         <div className="flex flex-col justify-center items-center">  
@@ -35,16 +38,19 @@ export default function Contratos(){
                         {   
 
                         searchEmpresas.length > 0 ?
-
+                       
                             searchEmpresas.map(empresa => (
+                                // include, só exibira contratos caso tenham sido realizados na pagina de empresas
+                                (empresa.id) in IDS ?
                                 <ContratoCard   id = {empresa.id}
                                                 empresaImg = {empresa.url} 
                                                 empresaNome = {empresa.nome}
                                                 selos = {empresa.selos}
                                                 contratoValor = {empresa.contrato}/>
+                                : null
                             ))
                         :
-                        <p>Empresa não disponível.</p>
+                        <p>Não há resultados para sua busca.</p>
                     }
                 </div>
             </div>

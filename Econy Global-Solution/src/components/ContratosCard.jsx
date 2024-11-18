@@ -1,9 +1,14 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { Link, useParams } from "react-router-dom"
 
 export default function ContratoCard({id, empresaImg, selos, contratoValor, empresaNome}){
     
-    
-    
+    // buscando dicionario de IDS e Emissões
+    const IDS = JSON.parse(localStorage.getItem('IDS'))
+
+    // estabelecendo rota dinamica
+   let {contrato} = useParams()
+
     return(
         <>
         <div className="divContrato | sm:flex sm:flex-row">
@@ -36,10 +41,12 @@ export default function ContratoCard({id, empresaImg, selos, contratoValor, empr
                     </div>
                     <div className="buttonContratoContainer">
                         <button className="buttonContrato bg-white text-[#00C174] | sm:p-[10px] sm:text-[16px]">Contrato pendente...</button>
-                        <button className="buttonContrato bg-[#00C174] text-white hover:bg-white hover:text-[#00C174] transition ease-in-out duration-300">GERENCIAR CONTRATO</button>
+                        <Link to={id}>
+                            <button className="buttonContrato bg-[#00C174] text-white hover:bg-white hover:text-[#00C174] transition ease-in-out duration-300">GERENCIAR CONTRATO</button>
+                        </Link>
                     </div>
                 </div>
-                <p className="w-[100%] py-[2px] text-center text-white font-medium | sm:text-[20px]">DATA DE EMISSÃO: 20/05/2024  | 18:53</p>
+                <p className="w-[100%] py-[2px] text-center text-white font-medium | sm:text-[20px]">DATA DE EMISSÃO: {IDS[id]}</p>
             </div>
                 <hr className="w-[100%] border-[1px] | sm:hidden" />
         </div>

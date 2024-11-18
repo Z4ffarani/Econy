@@ -9,6 +9,7 @@ import Empresas from './pages/Empresas.jsx'
 import Contratos from './pages/Contratos.jsx'
 import Certificacao from './pages/Certificacao.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
+import GerenciarContrato from './pages/GerenciarContrato.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,9 +17,10 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {index: true, element: <Dashboard/>},
-      {path:'Mercado', element: <Mercado/>},
-      {path:'Empresas', element: <Empresas/>},
-      {path:'Contratos', element: <Contratos/>},
+      {path:'/Mercado', element: <Mercado/>},
+      {path:'/Empresas', element: <Empresas/>},
+      {path:'/Contratos', element: <Contratos/>},
+      {path:'/Contratos/:contrato', element: <GerenciarContrato/>},
       {path:'Certificação', element: <Certificacao/>}
     ]
   },

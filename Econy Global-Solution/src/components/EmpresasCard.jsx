@@ -1,7 +1,6 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-export default function EmpresaCard({empresaImg, empresaNome, selos, empresaPais, empresaDescricao, empresaCreditos}){
-    
+export default function EmpresaCard({empresaImg, empresaNome, selos, empresaPais, empresaDescricao, empresaCreditos, id}){
     const [contratar, setContratar] = useState("CONTRATAR")
 
     const handleContratar = () => {
@@ -9,7 +8,30 @@ export default function EmpresaCard({empresaImg, empresaNome, selos, empresaPais
         setTimeout(()=>{
             alert(`${empresaNome} contratada`)
         }, 600)
+
+        // array de IDS
+        const IDS = JSON.parse(localStorage.getItem('IDS')) || {};
+        JSON.stringify(localStorage.setItem('id', id))
+
+        const identificador = JSON.parse(localStorage.getItem('id'))
+
+        const dataEmissão = new Date().toLocaleString('pt-BR')
+        IDS[identificador] = dataEmissão
+
+        localStorage.setItem('IDS', JSON.stringify(IDS));
+
+        console.log(IDS)
+       
     }
+
+    useEffect(() => {
+        const IDS = JSON.parse(localStorage.getItem('IDS'))
+        if(IDS !== undefined && IDS !== null){
+            if (id in IDS){
+                setContratar("CONTRATADA")
+            }
+        }
+    }, [])
 
     return (
         <>
