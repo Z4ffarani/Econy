@@ -14,7 +14,7 @@ export default function Contratos(){
     const searchEmpresas = dados.filter(empresa => empresa.busca.toLowerCase().includes(search.toLowerCase()))
 
     // recuperando lista de IDS via local storage
-    const IDS = JSON.parse(localStorage.getItem('IDS'))
+    const IDS = JSON.parse(localStorage.getItem('IDS')) || {};
 
     return (
         <>
@@ -41,13 +41,13 @@ export default function Contratos(){
                        
                             searchEmpresas.map(empresa => (
                                 // include, só exibira contratos caso tenham sido realizados na pagina de empresas
-                                (empresa.id) in IDS ?
+                                (empresa.id in IDS) &&
                                 <ContratoCard   id = {empresa.id}
                                                 empresaImg = {empresa.url} 
                                                 empresaNome = {empresa.nome}
                                                 selos = {empresa.selos}
                                                 contratoValor = {empresa.contrato}/>
-                                : null
+                                
                             ))
                         :
                         <p>Não há resultados para sua busca.</p>

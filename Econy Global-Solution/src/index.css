@@ -236,6 +236,29 @@
     border-radius: 5px;
   }
 
+
+  /* GERENCIAR CONTRATO */
+  .buttonGerenciar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00C174;
+    border: 2px solid;
+    border-color: #00C174;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 400;
+  }
+
+  .buttonGerenciar:hover{
+    background-color: transparent;
+    border: 2px solid;
+    border-color: #00C174;
+    color: #00C174;
+    transition: 0.3s;
+    animation: ease-in-out;
+  }
 }
 
 *{
