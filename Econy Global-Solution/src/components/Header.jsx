@@ -52,6 +52,9 @@ export default function Header() {
     // Formatação de pontuação por casa de milhares
     const creditoFormatado = new Intl.NumberFormat('pt-BR').format(carbonCred);
 
+    // selos no menuzinho de perfil
+    const selos = JSON.parse(localStorage.getItem('selos'))
+
     return ( 
         <>
             <header className="flex h-[50px] w-[100%] bg-[#00C174] justify-center items-center | sm:flex sm:justify-between sm:h-[60px] | lg:justify-center">
@@ -67,11 +70,12 @@ export default function Header() {
                                     
                     {/* PONTUAÇÃO RESPONSIVA 640px+ */}
                         <div className="hidden | sm:flex gap-2 mx-[70px]">
-                            <div className="headerPoints w-[100px] h-[28px]">
-                                <p id="nomeEmpresa"></p>
+                            <div className="headerPoints w-[100px] h-5">
+                                <p id="nomeEmpresa">Sua Empresa</p>
                             </div>
-                            <div className="headerPoints w-[100px] h-[28px]">
-                                <p id="creditoCarbono">{creditoFormatado}</p>
+                            <div className="headerPoints w-[100px] h-5">
+                                <p>{creditoFormatado}</p>
+ main
                             </div>
                         </div>
 
@@ -88,12 +92,23 @@ export default function Header() {
                     </div>
 
                     {/* CONTEUDO BOTÃO PERFIL */}
-                    <div className={`${showPoints ? 'flex flex-col translate-y-[70px] opacity-1 z-10' : 'flex flex-col  opacity-0 pointer-events-none translate-y-[40px] z-0'} flex flex-col justify-center items-center w-[100px] h-[100px] rounded-[5px] gap-3 m-2 absolute right-0 bg-[#1e1e1e] transition-all ease-in-out duration-500`}>
-                        <div className="headerPoints | sm:hidden">
-                            <p id="nomeEmpresa"></p>
+                    <div className={`${showPoints ? 'flex flex-col translate-y-[95px] opacity-1 z-10' : 'flex flex-col  opacity-0 pointer-events-none translate-y-[40px] z-0'} flex flex-col justify-center items-center w-[100px] h-[150px] rounded-[5px] gap-3 m-2 absolute right-0 bg-[#1e1e1e] transition-all ease-in-out duration-500 | sm:w-[150px]`}>
+                        <div className="headerPoints w-[80px] | sm:hidden">
+                            <p className="text-[12px]">Sua Empresa</p>
                         </div>
-                        <div className="headerPoints | sm:hidden">
-                            <p id="creditoCarbono">{creditoFormatado}</p>
+                        <div className="headerPoints w-[80px] | sm:hidden">
+                            <p className="text-[12px]">{creditoFormatado}</p>
+                        </div>
+                        <div className="grid grid-cols-[15px_15px_15px_15px] gap-[2px] | sm:grid-cols-[30px_30px_30px_30px] sm:gap-[4px]">
+                            {/* selos obtidos */}
+                            {
+                                Array.isArray(selos) && selos.length > 0 ? 
+                                    selos.map((i)=>{
+                                        return <img src={`../../images/selos/${i}.png`} alt="teste" />
+                                    })
+                                : null
+                                    
+                            }
                         </div>
                     </div>
 

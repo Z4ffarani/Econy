@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function CertificadoCard({certificadoImg, nomeCertificado, descricaoCertificado, porGrupoImg}) {
+export default function CertificadoCard({certificadoImg, nomeCertificado, descricaoCertificado, porGrupoImg, selo}) {
+
 
     // BOTÃO DE OBTER CERTIFICADO
     const [obter, setObter] = useState('OBTER')
 
     const handleObter = () => {
         setObter('OBTIDO')
+        
+        // // coleção de selos
+        const selos = JSON.parse(localStorage.getItem('selos')) || []
+        localStorage.setItem('selos', selo)
+
+        selos.push(selo)
+
+        localStorage.setItem('selos', JSON.stringify(selos))
+
         setTimeout(()=>{
             alert(`Certificado ${nomeCertificado} obtido`)
         }, 600)
         
     }
+
+    useEffect(()=>{
+        const selos = JSON.parse(localStorage.getItem('selos'))
+        selos != null && selos.includes(selo)  ? setObter('OBTIDO') : setObter('OBTER')
+    })
 
     // MOSTRAR NOME COMPLETO
     const [showText, setShowText] = useState(false)

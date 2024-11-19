@@ -210,9 +210,11 @@
   .contratoCompra{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 30px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #00C174;
   }
 
@@ -223,18 +225,25 @@
   /* botões de contrato */
   .buttonContratoContainer{
     display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+
+    justify-content: space-between;
+    gap: 5px;
+ main
   }
 
   .buttonContrato{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 140px;
+    height: 40px;
+
     width: 80%;
+ main
     font-size: 14px;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   .buttonGerenciarContrato{
@@ -319,12 +328,13 @@
   /* GERENCIAR CONTRATO */
   .buttonGerenciar{
     display: flex;
+    width: 135px;
     align-items: center;
     justify-content: center;
     background-color: #00C174;
     border: 2px solid;
     border-color: #00C174;
-    padding: 5px;
+    padding: 2px;
     border-radius: 10px;
     color: white;
     font-weight: 400;
