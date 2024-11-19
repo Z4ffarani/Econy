@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom"
 import dados from "../data/empresas.json"
 import { useEffect, useState } from "react"
@@ -16,6 +17,8 @@ export default function GerenciarContrato(){
         else{
             setRealizado("realizar contrato")
         }
+
+    main
 
         
 
@@ -100,7 +103,6 @@ export default function GerenciarContrato(){
                 <p>Pagina não encontrada</p>
             }
         </div>
-           
-        </>
-    )
+    </div>
+  );
 }
