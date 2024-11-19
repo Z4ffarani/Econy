@@ -228,19 +228,14 @@
 
     justify-content: space-between;
     gap: 5px;
- main
   }
 
   .buttonContrato{
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 140px;
     height: 40px;
-
-    width: 80%;
- main
     font-size: 14px;
     font-weight: 500;
     border-radius: 10px;
@@ -261,9 +256,8 @@
     align-items: center;
     justify-content: center;
     border: solid 2px black;
-    font-family: Open Sans;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 5px 0px;
     background-color: #46ffb5;
     margin: -1px -1px;
@@ -274,12 +268,12 @@
     align-items: center;
     justify-content: center;
     border: solid 2px black;
-    font-family: Open Sans;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 5px 0px;
     background-color: #81e6ff;
     margin: -1px -1px;
+    
   }
 
   .celula3 {
@@ -288,9 +282,8 @@
     justify-content: center;
     text-align: center;
     border: solid 2px black;
-    font-family: Open Sans;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 300;
     padding: 5px 0px;
     margin: -1px -1px;
   }
@@ -300,8 +293,7 @@
     border: solid 2px rgb(211, 211, 211);
     border-radius: 5px;
     font-size: 15px;
-    font-family: Open Sans;
-    font-weight: 500;
+    font-weight: 400;
     height: 40px;
   }
 
@@ -310,8 +302,7 @@
     width: 135px;
     height: 45px;
     border-radius: 8px;
-    font-family: Open Sans;
-    font-weight: 500;
+    font-weight: 400;
     color: white;
     transition: 200ms ease;
   }

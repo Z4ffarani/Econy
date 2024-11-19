@@ -18,10 +18,6 @@ export default function GerenciarContrato(){
             setRealizado("realizar contrato")
         }
 
-    main
-
-        
-
     },[IDS, contrato])
 
     // CANCELAR CONTRATO
@@ -64,7 +60,7 @@ export default function GerenciarContrato(){
 
 
     return(
-        <>
+        
         <div className="flex flex-col justify-center items-center my-[20px] | sm:mt-0">
             {
                 // condicional verifica se o ID da pagina corresponde a um ID real
@@ -103,6 +99,6 @@ export default function GerenciarContrato(){
                 <p>Pagina não encontrada</p>
             }
         </div>
-    </div>
+
   );
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getInventory, createResource, updateResource, deleteResource } from '../services/api_rest.jsx';
 
+
 export default function Dashboard() {
     const [inventory, setInventory] = useState([]);
     
@@ -122,7 +123,11 @@ export default function Dashboard() {
     };
 
     return (
-        <main className="overflow-x-auto overflow-y-hidden pt-2">
+        <>
+        <div className="flex w-[100%] h-[25px] bg-[#1E1E1E] justify-center items-center | sm:hidden">
+            <h1 className="text-[#00C174]">CONTRATOS</h1>
+        </div>
+        <main className="overflow-x-auto overflow-y-hidden">
             <div className="p-4 sm:p-0 sm:px-6 min-w-[1700px]">
                 <div className="grid grid-cols-7">
                     <h1 className="celula | rounded-tl-lg">EMPRESA:</h1>
@@ -156,7 +161,7 @@ export default function Dashboard() {
                     <h1 className="celula2">PERICULOSIDADE:</h1>
                     <h1 className="celula2">FORNECEDOR:</h1>
                     <h1 className="celula2">ARMAZENAMENTO:</h1>
-                    <h1 className="celula2 | rounded-tr-lg">ÚLTIMA INSPEÇÃO:</h1>
+                    <h1 className="celula2 text-nowrap | rounded-tr-lg">ÚLTIMA INSPEÇÃO:</h1>
                 </div>
 
                 <div className='h-[546px] overflow-y-auto px-1 border-b-2'>
@@ -179,7 +184,6 @@ export default function Dashboard() {
                         <p className='text-[30px] text-[#00C174] text-center font-sans py-10 font-semibold'>Carregando inventário...</p>
                     )}
                 </div>
-                
                 <div className='my-5 px-1 flex flex-col'>
                     <div className='w-full'>
                         <div className='grid grid-cols-10 gap-5 overflow-x-auto h-[70px] pb-4 mb-2 mr-[17px]'>
@@ -194,14 +198,14 @@ export default function Dashboard() {
                             <input id='storageLocation' type="text" placeholder='ARMAZENAMENTO' className='input' />
                         </div>
                     </div>
-
-                    <div className='flex gap-5 justify-end sm:justify-center'>
-                        <button onClick={handleAddResource} className='botaoCrud'>ADICIONAR</button>
-                        <button onClick={handleUpdateResource} className='botaoCrud | bg-yellow-500'>ATUALIZAR</button>
-                        <button onClick={handleDeleteResource} className='botaoCrud | bg-red-500'>DELETAR</button>
-                    </div>
                 </div>
             </div>
         </main>
+                <div className='flex gap-5 justify-center sm:justify-center mb-[30px]'>
+                    <button onClick={handleAddResource} className='botaoCrud'>ADICIONAR</button>
+                    <button onClick={handleUpdateResource} className='botaoCrud | bg-yellow-500'>ATUALIZAR</button>
+                    <button onClick={handleDeleteResource} className='botaoCrud | bg-red-500'>DELETAR</button>
+                </div>
+       </>
     );
 };

@@ -71,11 +71,11 @@ export default function Header() {
                     {/* PONTUAÇÃO RESPONSIVA 640px+ */}
                         <div className="hidden | sm:flex gap-2 mx-[70px]">
                             <div className="headerPoints w-[100px] h-5">
-                                <p id="nomeEmpresa">Sua Empresa</p>
+                                <p id="nomeEmpresa">UN Central</p>
                             </div>
                             <div className="headerPoints w-[100px] h-5">
                                 <p>{creditoFormatado}</p>
- main
+
                             </div>
                         </div>
 
@@ -94,7 +94,7 @@ export default function Header() {
                     {/* CONTEUDO BOTÃO PERFIL */}
                     <div className={`${showPoints ? 'flex flex-col translate-y-[95px] opacity-1 z-10' : 'flex flex-col  opacity-0 pointer-events-none translate-y-[40px] z-0'} flex flex-col justify-center items-center w-[100px] h-[150px] rounded-[5px] gap-3 m-2 absolute right-0 bg-[#1e1e1e] transition-all ease-in-out duration-500 | sm:w-[150px]`}>
                         <div className="headerPoints w-[80px] | sm:hidden">
-                            <p className="text-[12px]">Sua Empresa</p>
+                            <p className="text-[12px]">UN Central</p>
                         </div>
                         <div className="headerPoints w-[80px] | sm:hidden">
                             <p className="text-[12px]">{creditoFormatado}</p>

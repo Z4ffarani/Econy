@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
 
 export default function ContratoCard({id, empresaImg, selos, contratoValor, empresaNome}){
     
@@ -16,9 +17,8 @@ export default function ContratoCard({id, empresaImg, selos, contratoValor, empr
        
     })
 
- main
     return(
-        <>
+    
         <div className="divContrato | sm:flex sm:flex-row">
 
             {/* LADO SUPERIOR/ESQUERDO */}
@@ -48,21 +48,14 @@ export default function ContratoCard({id, empresaImg, selos, contratoValor, empr
                         <p>{contratoValor}</p>
                     </div>
                     <div className="buttonContratoContainer">
-
                         <button className={`buttonContrato ${estadoContrato === "contrato realizado"? "bg-[#1E1E1E] text-white" : " bg-white text-[#00C174] "} | sm:w-[50%] sm:text-[16px]`}>{estadoContrato}</button>
                         <Link to={id} className="flex sm:w-[50%]"><button className="buttonContrato bg-[#00C174] text-white hover:bg-white hover:text-[#00C174] transition ease-in-out duration-300 | sm:w-[100%] sm:text-[16px]">GERENCIAR</button></Link>
-
-                        <button className="buttonContrato bg-white text-[#00C174] | sm:p-[10px] sm:text-[16px]">Contrato pendente...</button>
-                        <Link to={`/Contratos/${id}`}>
-                            <button className="buttonGerenciarContrato bg-[#00C174] text-white hover:bg-white hover:text-[#00C174] transition ease-in-out duration-300">GERENCIAR CONTRATO</button>
-                        </Link>
-
                     </div>
                 </div>
                 <p className="w-[100%] py-[2px] text-center text-white font-medium | sm:text-[20px]">DATA DE EMISSÃO: {IDS[id][0]}</p>
             </div>
                 <hr className="w-[100%] border-[1px] | sm:hidden" />
         </div>
-        </>
+       
     )
 }
