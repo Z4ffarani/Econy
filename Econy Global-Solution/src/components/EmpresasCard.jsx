@@ -11,17 +11,14 @@ export default function EmpresaCard({empresaImg, empresaNome, selos, empresaPais
 
         // array de IDS
         const IDS = JSON.parse(localStorage.getItem('IDS')) || {};
-        JSON.stringify(localStorage.setItem('id', id))
+        localStorage.setItem('id', id)
 
         const identificador = JSON.parse(localStorage.getItem('id'))
 
         const dataEmissão = new Date().toLocaleString('pt-BR')
-        IDS[identificador] = dataEmissão
+        IDS[identificador] = [dataEmissão]
 
         localStorage.setItem('IDS', JSON.stringify(IDS));
-
-        console.log(IDS)
-       
     }
 
     useEffect(() => {
