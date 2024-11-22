@@ -4,6 +4,10 @@
 - **Kaique Zaffarani** | 556677
 - **Guilherme Santos Nunes** | 558989
 
+## LINKS:
+- **[VÍDEO EXPLICATIVO 1](https://youtu.be/5BdzgsT5DlY)**
+- **[VÍDEO EXPLICATIVO 2](https://youtu.be/2ojkb-5r94c)**
+
 <br>
 
 # PROJETO
