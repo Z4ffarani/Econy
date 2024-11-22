@@ -36,7 +36,7 @@ npm install
 npm run dev
 ```
 
-5. Acessar o site no endereço: http://localhost:5173
+5. Acessar o site no endereço: **http://localhost:5173**
 
 <br>
 
