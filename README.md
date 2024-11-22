@@ -7,7 +7,7 @@
 <br>
 
 # PROJETO
-**Econy** é uma plataforma voltada para a visualização de inventário de gases de efeito estufa (GEE), comercialização de créditos de carbono entre empresas ao redor do mundo e certificações de sustentabilidade realizadas por auditorias terceirizadas. O Front-end oferece uma interface moderna e intuitiva, garantindo que os usuários possam navegar de maneira dinâmica e compatível com diferentes dispositivos. Todas as transações realizadas são registradas em uma blockchain, garantindo segurança e imutabilidade dos dados.
+Econy é uma plataforma voltada para a visualização de inventário de gases de efeito estufa (GEE), comercialização de créditos de carbono entre empresas ao redor do mundo e certificações de sustentabilidade realizadas por auditorias terceirizadas. O Front-end oferece uma interface moderna e intuitiva, garantindo que os usuários possam navegar de maneira dinâmica e compatível com diferentes dispositivos. Todas as transações realizadas são registradas em uma blockchain, garantindo segurança e imutabilidade dos dados.
 
 <br>    
 
