@@ -56,7 +56,7 @@ export default function Contratos(){
                                         : null
                                     ))
                                 :
-                                <p>Não há resultados para sua busca.</p>
+                                <p className="pt-3">Não há resultados para sua busca.</p>
                             }
                         </div>
                     </div>
