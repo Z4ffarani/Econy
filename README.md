@@ -60,7 +60,7 @@ npm run dev
 
 - Os dados apresentados na plataforma são fictícios e têm propósito exclusivamente demonstrativo.
 
-- É necessária a instalação do **Node.js** para rodar o projeto localmente.
+- É necessária a instalação do Node.js para rodar o projeto localmente.
 
 - O site é responsivo, adaptando-se a diferentes dispositivos e garantindo que o conteúdo seja acessível em smartphones, tablets e desktops.
   
