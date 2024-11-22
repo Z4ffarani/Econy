@@ -45,7 +45,7 @@ npm run dev
 
 - **Componentização e reaproveitamento de código** | O projeto utiliza componentes reutilizáveis, promovendo a consistência e facilitando a manutenção do código.
   
-- **Chamadas de API** | O arquivo `api_rest.jsx` gerencia operações CRUD (Create, Read, Update e Delete) em uma API (Application Programming Interface) criada no mockAPI, permitindo a manipulação de dados de forma prática e eficiente.
+- **Chamadas de API** | O arquivo `api_rest.jsx` gerencia operações CRUD (Create, Read, Update e Delete) em uma API (Application Programming Interface) criada no mockAPI (site para criar e hospedar APIs de simulação), permitindo a manipulação de dados de forma prática e eficiente.
 
 - **Armazenamento de dados em sessão** | Os dados manipulados no projeto são armazenados no navegador por meio do `localStorage`, simulando um ambiente real de operação.
 
