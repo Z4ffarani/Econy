@@ -11,7 +11,7 @@
 <br>
 
 # PROJETO
-Econy é uma plataforma voltada para a visualização de inventário de gases de efeito estufa (GEE), comercialização de créditos de carbono entre empresas ao redor do mundo e certificações de sustentabilidade realizadas por auditorias terceirizadas. O Front-end oferece uma interface moderna e intuitiva, garantindo que os usuários possam navegar de maneira dinâmica e compatível com diferentes dispositivos. Todas as transações realizadas são registradas em uma blockchain, garantindo segurança e imutabilidade dos dados.
+Econy é uma plataforma voltada para a visualização de inventário de gases de efeito estufa (GEE), comercialização de créditos de carbono entre empresas ao redor do mundo e certificações de sustentabilidade realizadas por auditorias terceirizadas. O front-end oferece uma interface moderna e intuitiva, garantindo que os usuários possam navegar de maneira dinâmica e compatível com diferentes dispositivos. Todas as transações realizadas são registradas em uma blockchain, garantindo segurança e imutabilidade dos dados.
 
 <br>    
 
@@ -49,7 +49,7 @@ npm run dev
 
 - **Componentização e reaproveitamento de código** | O projeto utiliza componentes reutilizáveis, promovendo a consistência e facilitando a manutenção do código.
   
-- **Chamadas de API** | O arquivo `api_rest.jsx` gerencia operações CRUD (Create, Read, Update e Delete) em uma API (Application Programming Interface) criada no mockAPI (site para criar e hospedar APIs de simulação), permitindo a manipulação de dados de forma prática e eficiente.
+- **Chamadas de API** | O arquivo `api_rest.jsx` gerencia operações CRUD (create, read, update e delete) em uma API (inteface de programação de aplicações) criada no mockAPI (site para criar e hospedar APIs de simulação), permitindo a manipulação de dados de forma prática e eficiente.
 
 - **Armazenamento de dados em sessão** | Os dados manipulados no projeto são armazenados no navegador por meio do `localStorage`, simulando um ambiente real de operação.
 
