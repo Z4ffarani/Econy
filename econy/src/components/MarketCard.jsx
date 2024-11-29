@@ -28,7 +28,7 @@ export default function MarketCard({mercado, preco, ytd, cambio, pais}) {
 
             <span>|</span>
 
-            <div className="sm:w-[60px] sm:flex sm:flex-col sm:justify-center sm:items-center">
+            <div className="pr-2 sm:pr-0 sm:w-[60px] sm:flex sm:flex-col sm:justify-center sm:items-center">
                 <h1 className="sm:text-[12px]">CÂMBIO</h1>
                 <p className={`${
                         cambio === 0 ? 'text-[#6D6D6D]' :
@@ -36,9 +36,9 @@ export default function MarketCard({mercado, preco, ytd, cambio, pais}) {
                     }   sm:text-[16px]`}>{cambio}%</p>
             </div>
             
-            <button className="hidden sm:block rounded-full px-3 bg-white p-[5px] text-[10px] text-[#00C174] shadow-md hover:bg-[#00C174] hover:text-white transition duration-500 | sm:text-[14px]">
+            <a href="https://carboncredits.com/carbon-prices-today/" className="hidden sm:block rounded-full px-3 bg-white p-[5px] text-[10px] text-[#00C174] shadow-md hover:bg-[#00C174] hover:text-white transition duration-500 font-normal | sm:text-[14px]">
                 GRÁFICO
-            </button>
+            </a>
         </div>
      );
 }

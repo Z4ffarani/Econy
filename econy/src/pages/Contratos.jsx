@@ -24,7 +24,7 @@ export default function Contratos(){
     return (
         <>
             <div className="flex flex-col justify-center items-center">  
-                <div className="flex w-[100%] h-[25px] mb-[-19px] sm:mb-0 bg-[#005030] justify-center items-center | sm:hidden">
+                <div className="flex w-[100%] h-[35px] mb-[-19px] sm:mb-0 bg-[#005030] justify-center items-center | sm:hidden">
                     <h1 className="text-[#00C174]">CONTRATOS</h1>
                 </div>
             
@@ -48,7 +48,8 @@ export default function Contratos(){
                                         // include, só exibira contratos caso tenham sido realizados na pagina de empresas
                                         (empresa.id) in IDS ?
 
-                                        <ContratoCard   id = {empresa.id}
+                                        <ContratoCard   key={empresa.id}
+                                                        id = {empresa.id}
                                                         empresaImg = {empresa.url} 
                                                         empresaNome = {empresa.nome}
                                                         selos = {empresa.selos}

@@ -4,7 +4,7 @@ export default function Certificacao(){
     return (
         <>
         <div className="flex flex-col items-center">  
-            <div className="flex w-[100%] h-[25px] bg-[#005030] justify-center items-center | sm:hidden ">
+            <div className="flex w-[100%] h-[35px] bg-[#005030] justify-center items-center | sm:hidden ">
                 <h1 className="text-[#00C174]">CERTIFICAÇÃO</h1>
             </div>
             {/* GRID DE CERTIFICADOS */}

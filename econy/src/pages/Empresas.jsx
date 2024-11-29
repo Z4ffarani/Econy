@@ -15,7 +15,7 @@ export default function Empresas(){
     
     return (
         <div>  
-            <div className="flex w-[100%] h-[25px] bg-[#005030] justify-center items-center | sm:hidden">
+            <div className="flex w-[100%] h-[35px] bg-[#005030] justify-center items-center | sm:hidden">
                 <h1 className="text-[#00C174]">EMPRESAS</h1>
             </div>
 
@@ -41,7 +41,9 @@ export default function Empresas(){
 
                                 searchEmpresas.map(empresa => (
                                     
-                                    <EmpresaCard empresaImg={empresa.url} 
+                                    <EmpresaCard
+                                                key={empresa.url}
+                                                empresaImg={empresa.url} 
                                                 empresaNome={empresa.nome}
                                                 selos={empresa.selos}
                                                 empresaPais={empresa.pais}

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getInventory, createResource, updateResource, deleteResource } from '../services/api_rest.jsx';
 
-
 export default function Dashboard() {
     const [inventory, setInventory] = useState([]);
     
@@ -124,7 +123,7 @@ export default function Dashboard() {
 
     return (
         <>
-            <div className="flex w-[100%] h-[25px] bg-[#005030] justify-center items-center | sm:hidden">
+            <div className="flex w-[100%] h-[35px] bg-[#005030] justify-center items-center | sm:hidden">
                 <h1 className="text-[#00C174]">CONTRATOS</h1>
             </div>
             <main className="overflow-x-auto overflow-y-hidden">
@@ -133,7 +132,7 @@ export default function Dashboard() {
                         <h1 className="celula | rounded-tl-lg">EMPRESA:</h1>
                         <h1 className="celula">LOCALIDADE:</h1>
                         <h1 className="celula">OPERADOR:</h1>
-                        <h1 className="celula">INAUGUROU:</h1>
+                        <h1 className="celula">INÍCIO:</h1>
                         <h1 className="celula">REATOR:</h1>
                         <h1 className="celula">CAPACIDADE:</h1>
                         <h1 className="celula | rounded-tr-lg">STATUS:</h1>
@@ -164,20 +163,20 @@ export default function Dashboard() {
                         <h1 className="celula2 text-nowrap | rounded-tr-lg">ÚLTIMA INSPEÇÃO:</h1>
                     </div>
 
-                    <div className='h-[546px] overflow-y-auto px-1 border-b-2'>
+                    <div className='h-[546px] overflow-y-auto px-1 border-b-2 pb-5'>
                         {inventory.length > 0 ? (
                             inventory.map((item) => (
                                 <div key={item.id} className="grid grid-cols-10">
-                                    <h1 className="celula3 | bg-gradient-to-r from-blue-200 to-transparent font-bold text-[15px] mr-[20px]">{item.id}</h1>
+                                    <h1 className="celula3 | bg-gradient-to-r mr-[20px] text-[18px] font-medium">{item.id}</h1>
                                     <h1 className="celula3 | text-[15px]">{item.category}</h1>
-                                    <h1 className="celula3">{item.item}</h1>
-                                    <h1 className="celula3">{item.quantity}</h1>
-                                    <h1 className="celula3">{item.unitPriceUSD}</h1>
-                                    <h1 className="celula3">{item.totalValueUSD}</h1>
-                                    <h1 className="celula3">{item.safetyRating}</h1>
-                                    <h1 className="celula3">{item.supplier}</h1>
-                                    <h1 className="celula3">{item.storageLocation}</h1>
-                                    <h1 className="celula3">{item.lastInspectionDate}</h1>
+                                    <h1 className="celula3 | text-[15px]">{item.item}</h1>
+                                    <h1 className="celula3 | text-[15px]">{item.quantity}</h1>
+                                    <h1 className="celula3 | text-[15px]">{item.unitPriceUSD}</h1>
+                                    <h1 className="celula3 | text-[15px]">{item.totalValueUSD}</h1>
+                                    <h1 className="celula3 | text-[15px]">{item.safetyRating}</h1>
+                                    <h1 className="celula3 | text-[12px]">{item.supplier}</h1>
+                                    <h1 className="celula3 | text-[15px]">{item.storageLocation}</h1>
+                                    <h1 className="celula3 | text-[12px]">{item.lastInspectionDate}</h1>
                                 </div>
                             ))
                         ) : (
@@ -201,7 +200,7 @@ export default function Dashboard() {
                     </div>
                 </div>
             </main>
-            <div className='flex gap-3 justify-center sm:justify-center mt-5 mb-[30px] mx-3'>
+            <div className='flex gap-3 justify-center sm:justify-center mt-5 mb-[50px] mx-3'>
                 <button onClick={handleAddResource} className='botaoCrud'>ADICIONAR</button>
                 <button onClick={handleUpdateResource} className='botaoCrud | bg-yellow-500'>ATUALIZAR</button>
                 <button onClick={handleDeleteResource} className='botaoCrud | bg-red-500'>DELETAR</button>

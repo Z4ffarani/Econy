@@ -21,8 +21,8 @@ export default function Header() {
 
     const handleSectionName = (event) => {
         setSectionName(event.target.textContent)
+        setShowButton(false)
     }
-
 
     // LOCALSTORAGE ARMEZENAR créditos
     const [carbonCred, setCarbonCred] = useState(0)
@@ -57,7 +57,7 @@ export default function Header() {
 
     return ( 
         <>
-            <header className="flex h-[50px] w-[100%] bg-[#00C174] justify-center items-center | sm:flex sm:justify-between sm:h-[60px] | lg:justify-center">
+            <header className="flex h-[65px] w-[100%] px-1 bg-[#00C174] justify-center items-center | sm:flex sm:justify-between sm:h-[75px] | lg:justify-center">
                 
                 <div className="flex w-[100%] max-w-[1024px] justify-center items-center relative | sm:flex sm:justify-between sm:px-[20px]">
                     {/* HAMBURGUER BTN PARA DISPOSITIVOS MOVEIS */}
@@ -103,7 +103,7 @@ export default function Header() {
                             {
                                 Array.isArray(selos) && selos.length > 0 ? 
                                     selos.map((i)=>{
-                                        return <img src={`../../images/selos/${i}.png`} alt="teste" />
+                                        return <img key={i} src={`../../images/selos/${i}.png`} alt="teste" />
                                     })
                                 : null
                                     
@@ -112,18 +112,18 @@ export default function Header() {
                     </div>
 
                     {/* CONTEUDO MENU DE NAVEGAÇÃO */}
-                    <div className={`${showButton ? 'flex flex-col translate-y-[120px] opacity-1 z-10' : 'flex flex-col  opacity-0 pointer-events-none translate-y-[90px] z-0'} w-[140px] rounded-[5px] m-2 absolute left-0  bg-[#005030] text-[#FFFFFF] transition-all ease-in-out duration-500 | sm:hidden`}>
-                        <NavLink to="/" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>DASHBOARD</NavLink>
-                        <NavLink to="/Mercado" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>MERCADO</NavLink>
-                        <NavLink to="/Empresas" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>EMPRESAS</NavLink>
-                        <NavLink to="/Contratos" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CONTRATOS</NavLink>
-                        <NavLink to="/Certificacao" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-[5px]`}>CERTIFICAÇÃO</NavLink>
+                    <div className={`${showButton ? 'flex flex-col translate-y-[125px] opacity-1 z-10' : 'flex flex-col opacity-0 pointer-events-none translate-y-[90px] z-0'} w-[140px] rounded-md m-2 absolute left-0 bg-[#005030] text-[#FFFFFF] transition-all ease-in-out duration-500 | sm:hidden`}>
+                        <NavLink to="/" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-md`}>DASHBOARD</NavLink>
+                        <NavLink to="/Mercado" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-md`}>MERCADO</NavLink>
+                        <NavLink to="/Empresas" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-md`}>EMPRESAS</NavLink>
+                        <NavLink to="/Contratos" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-md`}>CONTRATOS</NavLink>
+                        <NavLink to="/Certificacao" onClick={handleSectionName} className={`hover:bg-custom-gradient p-2 rounded-md`}>CERTIFICAÇÃO</NavLink>
                     </div>
                 </div>
             </header>
             {/* CONTEUDO MENU DE NAVEGAÇÃO W-640px+ */}
-            <div className="hidden  | sm:flex sm:flex-col sm:mb-[30px]">
-                <nav className="py-[19px] flex justify-center items-center h-[25px] gap-5 bg-[#005030] text-white">
+            <div className="hidden | sm:flex sm:flex-col sm:mb-[30px]">
+                <nav className="py-[22px] flex justify-center items-center h-[40px] gap-5 bg-[#005030] text-white">
                     <NavLink to="/" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>DASHBOARD</NavLink>
                     <NavLink to="/Mercado" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>MERCADO</NavLink>
                     <NavLink to="/Empresas" onClick={handleSectionName} className={({isActive}) => isActive ? 'text-[#00C174]' : 'text-white'}>EMPRESAS</NavLink>

@@ -15,14 +15,14 @@ export default function Mercado(){
     return (
         <>
         <div className="flex flex-col items-center">  
-            <div className="flex w-[100%] h-[25px] bg-[#005030] justify-center items-center mb-5 | sm:hidden">
+            <div className="flex w-[100%] h-[35px] bg-[#005030] justify-center items-center mb-5 | sm:hidden">
                 <h1 className="text-[#00C174]">MERCADO</h1>
             </div>
             
             {/* DATA */}
-            <div className="flex w-[95%] max-w-[640px] text-[#00C174] text-[13px] font-normal justify-between | sm:text-[18px]">
-                <h1>CRÉDITOS DE CARBONO</h1>
-                <h1>UFT-8 <span className="text-[#d9d9d9]">|</span> {data}</h1>
+            <div className="flex w-[95%] max-w-[640px] text-[#00C174] text-[13px] font-normal justify-center sm:justify-between | sm:text-[18px]">
+                <h1 className="hidden sm:block">CRÉDITOS DE CARBONO</h1>
+                <h1>UTF-8 <span className="text-[#d9d9d9]">|</span> {data}</h1>
             </div>
             <hr className="w-[95%] max-w-[640px] mb-2"/>
 

@@ -18,7 +18,7 @@ export default function CertificadoCard({certificadoImg, nomeCertificado, descri
         localStorage.setItem('selos', JSON.stringify(selos))
 
         setTimeout(()=>{
-            alert(`Certificado ${nomeCertificado} obtido`)
+            alert(`Certificado ${nomeCertificado} obtido!`)
         }, 600)
         
     }

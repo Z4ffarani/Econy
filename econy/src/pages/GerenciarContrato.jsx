@@ -69,11 +69,11 @@ export default function GerenciarContrato(){
                     <div className="flex flex-col justify-center items-center max-w-[320px] gap-2 | sm:w-[640px]">
                         <div className="sm:grid sm:grid-cols-[320px_320px] sm:grid-rows-2">
                             <div className="flex flex-col items-center">
-                                <h1 className="w-[90%] p-1 text-[16px] text-center text-white font-medium bg-[#00C174] rounded-md">{contratoDados.nome}</h1>
+                                <h1 className="w-[90%] p-1 text-[20px] text-center text-white font-medium bg-[#00C174] rounded-md">{contratoDados.nome}</h1>
                                 <img  className="w-[320px] rounded-[30px] p-4" src={`../../images/empresas/${contratoDados.url}.png`} alt={`${contratoDados.nome}`} />
                             </div>
                             <div className="flex flex-col items-center | sm:col-start-2 sm:row-start-1 sm:row-end-3 sm:gap-4">
-                                <p className="w-[90%] p-2 bg-[#c9c9c9] rounded-[15px] text-justify text-[12px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis esse voluptatum numquam nesciunt, labore obcaecati ex, iste quisquam excepturi, doloremque quae quam tempore rerum atque quaerat ab nemo! Distinctio, nostrum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus dolor nobis deleniti, repellendus sed pariatur tempora rerum nemo culpa placeat commodi et sequi voluptatum expedita quidem delectus? Quis, aspernatur ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate enim rerum, nulla amet ab labore repellat reprehenderit facere necessitatibus? Eum alias laboriosam modi natus ratione ullam. Asperiores corporis consequatur aliquid!</p>
+                                <p className="w-[90%] p-4 bg-gray-200 rounded-[15px] text-justify text-[12px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis esse voluptatum numquam nesciunt, labore obcaecati ex, iste quisquam excepturi, doloremque quae quam tempore rerum atque quaerat ab nemo! Distinctio, nostrum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus dolor nobis deleniti, repellendus sed pariatur tempora rerum nemo culpa placeat commodi et sequi voluptatum expedita quidem delectus? Quis, aspernatur ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate enim rerum, nulla amet ab labore repellat reprehenderit facere necessitatibus? Eum alias laboriosam modi natus ratione ullam. Asperiores corporis consequatur aliquid!</p>
                             </div>
                         
                        

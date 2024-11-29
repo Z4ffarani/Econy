@@ -26,7 +26,7 @@ export default function ContratoCard({id, empresaImg, selos, contratoValor, empr
                     <div className="grid grid-cols-[30px] gap-2 sm:gap-1 ml-2 absolute top-[30%] | sm:grid-cols-[20px] sm:top-[40%]">
                         {
                             selos.map(selos => (
-                                <img className="seloIcon | sm:h-[20px]" src={`../../images/selos/${selos}.png`} alt={`${selos}`}/>
+                                <img key={selos} className="seloIcon | sm:h-[20px]" src={`../../images/selos/${selos}.png`} alt={`${selos}`}/>
                             )
                             )
                         }

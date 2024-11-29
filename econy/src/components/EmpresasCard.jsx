@@ -46,7 +46,7 @@ export default function EmpresaCard({empresaImg, empresaNome, selos, empresaPais
                     <img className="empresaPais" src={`../../images/paises/${empresaPais}.png`} alt={`${empresaPais}`}/>
                     {
                         selos.map(selos => (
-                            <img className="seloIcon" src={`../../images/selos/${selos}.png`} alt={`${selos}`}/>
+                            <img key={selos} className="seloIcon" src={`../../images/selos/${selos}.png`} alt={`${selos}`}/>
                         )
                         )
                     }

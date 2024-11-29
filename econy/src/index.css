@@ -258,25 +258,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px black;
-    font-size: 17px;
+    color: white;
+    font-size: 18px;
     font-weight: 500;
-    padding: 5px 0px;
-    background-color: #46ffb5;
-    margin: -1px -1px;
+    padding: 10px 0px;
+    background-color: #00C174;
+    margin: 1px -1px;
   }
 
   .celula2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px black;
     font-size: 17px;
     font-weight: 500;
-    padding: 5px 0px;
-    background-color: #81e6ff;
-    margin: -1px -1px;
-    
+    padding: 13px 0px;
+    background-color: rgb(229, 231, 235);
+    margin: 0px -1px;
   }
 
   .celula3 {
@@ -284,10 +282,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: solid 2px black;
-    font-size: 12px;
+    border: solid 2px rgb(211, 211, 211);
+    border-top: transparent;
+    font-size: 16px;
     font-weight: 300;
-    padding: 5px 0px;
+    padding: 8px 0px;
     margin: -1px -1px;
   }
 
@@ -295,7 +294,7 @@
     text-align: center;
     border: solid 2px rgb(211, 211, 211);
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     height: 40px;
   }
