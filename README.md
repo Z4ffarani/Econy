@@ -48,6 +48,15 @@ Acesse: `http://localhost:5173`
 
 ---
 
+## Projetos acadêmicos
+
+| Entrega | Repositório |
+|---|---|
+| Global Solution · Computational Thinking with Python · FIAP 2024.2 | [2024-SEM2-GS-COMPUTATIONAL-THINKING-WITH-PYTHON](https://github.com/Z4FFARANI-EDUCATIONAL/2024-SEM2-GS-COMPUTATIONAL-THINKING-WITH-PYTHON) |
+| Global Solution · Edge Computing & Computer Systems · FIAP 2024.2 | [2024-SEM2-GS-EDGE-COMPUTING-AND-COMPUTER-SYSTEMS](https://github.com/Z4FFARANI-EDUCATIONAL/2024-SEM2-GS-EDGE-COMPUTING-AND-COMPUTER-SYSTEMS) |
+
+---
+
 ## Tecnologias
 
 [![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev)
