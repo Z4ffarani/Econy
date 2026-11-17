@@ -6,6 +6,13 @@ Econy é uma plataforma voltada para a visualização de inventário de gases de
 
 ---
 
+## Integrantes
+
+- [Guilherme Santos Nunes](https://github.com/sannunez)
+- [Kaique Zaffarani](https://github.com/Z4ffarani)
+
+---
+
 ## Funcionalidades
 
 - **Interface convidativa** | A interface é projetada para ser visualmente atraente e organizada, oferecendo uma experiência de navegação simplificada e agradável.
